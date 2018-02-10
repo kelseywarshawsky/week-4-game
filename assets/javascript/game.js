@@ -1,3 +1,4 @@
+$(document).ready(function () { 
 var targetNumber = 111;
 
 $("#target-score").text(targetNumber);
@@ -11,7 +12,7 @@ for (var i = 0; i < crystals.length; i++) {
     gem.attr("src", crystals[i]);
     gem.addClass("gem-image");
     gem.attr("data-gemvalue", numberOptions[Math.floor(Math.random() * numberOptions.length)]);
-    $(".col-md-8").append(gem);
+    $("#gems").append(gem);
 
 }
 
@@ -22,7 +23,7 @@ for (var i = 0; i < crystals.length; i++) {
 
     counter += gemValue;
 
-    alert("New score: " + counter);
+    $("#targetscore").text("Your current score: " + counter);
 
     if (counter === targetNumber) {
       alert("You win!");
@@ -32,3 +33,4 @@ for (var i = 0; i < crystals.length; i++) {
 
 
   });
+});

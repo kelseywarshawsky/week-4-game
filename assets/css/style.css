@@ -42,3 +42,7 @@ body {
     border-width: 2px;
     border-color: pink;
 }
+
+.gems {
+    align-content: center;
+}
